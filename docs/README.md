@@ -1,6 +1,6 @@
-# Criteo
-Get the holiday data you need to drive more sales. See the season’s peaks, top categories, and biggest mobile moments across the globe in our report and interactive map.
-For more information please visit, [Criteo](https://www.criteo.com/) website.
+# STP
+Display STP chat on your website.
+For more information please visit [STP](https://www.stp.es/live-chat/) website.
 
 
 ## How to install
@@ -12,7 +12,7 @@ or
 Run the following command:
 
 ```sh
-vtex install vtex.criteo@0.x
+vtex install vtex.stp@0.x
 ```
 
-Next, open the app settings on your admin and fill the form with your Criteo details.
+Next, open the app settings on your admin and fill the form with your STP details.
