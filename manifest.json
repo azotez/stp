@@ -1,8 +1,8 @@
 {
-  "name": "criteo",
+  "name": "stp",
   "vendor": "vtex",
-  "version": "0.0.5",
-  "description": "Criteo",
+  "version": "0.0.1",
+  "description": "STP chat",
   "builders": {
     "react": "3.x",
     "store": "0.x",
@@ -10,14 +10,28 @@
   },
   "credentialType": "absolute",
   "settingsSchema": {
-    "title": "Criteo",
+    "title": "STP",
     "type": "object",
     "properties": {
-      "criteo_id": {
-        "title": "Criteo ID",
-        "description": "Enter your Criteo ID",
-        "type": "string"
-      }
+	  "stpFloatLayout": {
+        "title": "Float layout",
+        "description": "Do you want the layout to float?",
+        "type": "boolean",
+		"default": false
+      },
+      "stpMail": {
+        "title": "Email",
+        "description": "STP email address",
+        "type": "string",
+		"default": "chat@stp.es"
+      },
+	  "stpService": {
+        "title": "Service",
+        "description": "STP service number",
+        "type": "string",
+		"default": "14928"
+      },	
+	
     }
   },
   "dependencies": {
