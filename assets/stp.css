@@ -1,0 +1,10 @@
+/* CSS Document */
+
+#advertising_balloon .content p, .dv_content *, .dv_body, .dv_body .form_user, .dv_body .form_user .field label {
+    font-family: "Poppins", sans-serif!important;
+}
+
+#advertising_balloon, .dv_content .dv_head{border-radius:0px!important; border:none;}
+#advertising_balloon .content p, .dv_content .dv_head .content p{color:#fff;}
+
+#advertising_balloon{ background: #6c6c6c!important;}

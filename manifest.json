@@ -1,12 +1,13 @@
 {
-  "name": "stp",
-  "vendor": "vtex",
+  "name": "stp-chat-integration",
+  "vendor": "vtexspain",
   "version": "0.0.1",
   "description": "STP chat",
   "builders": {
+    "assets": "0.x",  
+    "pixel": "0.x",
     "react": "3.x",
-    "store": "0.x",
-    "pixel": "0.x"
+    "store": "0.x"
   },
   "credentialType": "absolute",
   "settingsSchema": {
@@ -77,7 +78,7 @@
         "title": "Language",
         "description": "Enter the Language (2 digits) ISO 639-1 Code",
         "type": "string",
-        "default": ""
+        "default": "es"
       },
       "stpTextNoAgent": {
         "title": "Text no agent",
@@ -167,7 +168,7 @@
         "title": "CSS URL",
         "description": "Enter custom CSS URL",
         "type": "string",
-        "default": "http://ecatalog.stp.es/wp-content/themes/ecatalog/chat.css"
+        "default": "assets/stp.css"
       },
       "stpCssFontFamily": {
         "title": "CSS URL",
