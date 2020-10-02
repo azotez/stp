@@ -1,35 +1,58 @@
-<script type="text/javascript">
+<script>
+// STP embed code START	
 (function(N,u,m,i,t,e,c){ N[i]||(N[i] = function(){(N[i].q=N[i].q||[]).push(arguments);});
 e=u.createElement('script'),c=u.scripts[0]; e.onreadystatechange = e.onload = a; e.src='https://chat.invoxcontact.com/serviceSystem/importFiles/?key=' + m;
 c.parentNode.insertBefore(e,c); var l = 4, r = 0; ex=0; function a() { r+=1;
 if(typeof(window[N[i].q[0][0]]) == 'function')  { window[N[i].q[0][0]](N[i].q[0][1]); ex=1; }
 else if (r <= l) {setTimeout(function() { if(ex==0) a();}, 5000);}}}
-(this,document,'R_XVNe3GWPh2EICIyFj2LEyo4aroiOpNB_442o-VdJwwz5tSyohxDiFqctk9NzD7Dly2yBybxPrIH1D5dAGd7DjEXTxP2XJ-AyPOxnezCmbSrBY6gGFzl_Mtv-7lO2Nf6B7hR2jXGZMG3Suw-64q9bsHyDaGWQ8tNrWqtsjdMmSMy-AnpON6s9DnwJstfZVjGSzbFnBSa-PzCFnEablFWA','nmtc'));
+(this,document,'{{settings.stpHash}}','nmtc'));
 nmtc('chatNumintec', {
     	float_layout: '{{settings.stpFloatLayout}}',
-		element : '#chat_block',
-		title : 'Contacta con nosotros',
+		element : '{{settings.stpElement}}',
+		title : '{{settings.stpTitle}}',
         email: '{{settings.stpMail}}',
         service: '{{settings.stpService}}',
-        reason: true,
-        reason_require: false,
-        reason_text: '¿Nos puede especificar el motivo de su consulta?',        
-        background: '#00c2cb',
-        language: 'es',
-        text_no_agent: 'Nuestros agentes están ocupados, si deseas que contactemos contigo, indícanos el motivo y datos de contacto',
-        text_success_send_email: 'Tus datos han sido recibidos correctamente, nuestros operadores contactaran contigo a la mayor brevedad posible. Gracias',
-        captcha: true,
-        advertising: true,
-        advertising_text: '¡Bienvenido! ¿Necesitas resolver tus dudas ahora? ',
-        anonymous: false,
-        login: false,
-        register: false,
-        user_email: '',
-        user_name: '',
-        auto_submit: false,
-        privacy_policy: false,
-        privacy_policy_url: '',
-        privacy_policy_text: '',
-        css_src: 'http://ecatalog.stp.es/wp-content/themes/ecatalog/chat.css'
+        reason: '{{settings.stpReason}}',
+        reason_require: '{{settings.stpReasonRequire}}',
+        reason_text: '{{settings.stpReasonText}}',        
+        background: '{{settings.stpBackground}}',
+        language: '{{settings.stpLanguage}}',
+        text_no_agent: '{{settings.stpTextNoAgent}}',
+        text_success_send_email: '{{settings.stpSuccessSendEmail}}',
+        captcha: '{{settings.stpCaptcha}}',
+        advertising: '{{settings.stpAdvertising}}',
+        advertising_text: '{{settings.stpAdvertisingText}}',
+        anonymous: '{{settings.stpAnonymous}}',
+        login: '{{settings.stpLogin}}',
+        register: '{{settings.stpRegister}}',
+        user_email: '{{settings.stpUserEmail}}',
+        user_name: '{{settings.stpUserName}}',
+        auto_submit: '{{settings.stpAutoSumbit}}',
+        privacy_policy: '{{settings.stpPrivacyPolicy}}',
+        privacy_policy_url: '{{settings.stpPrivacyPolicyUrl}}',
+        privacy_policy_text: '{{settings.stpPrivacyPolicyText}}',
+        css_src: '{{settings.stpCssUrl}}'
 });
+// STP embed code END
+	
+// STP app code
+  (function(window) {
+    var stpMail = "{{settings.stpMail}}";
+    if (stpMail) {
+      window.stpMail = stpMail;
+    } else {
+      console.error(
+        "Warning: No STP email is defined. Please configure it in the apps admin."
+      );
+    }
+	var stpService = "{{settings.stpService}}";
+    if (stpService) {
+      window.stpService = stpService;
+    } else {
+      console.error(
+        "Warning: No STP service is defined. Please configure it in the apps admin."
+      );
+    }
+  })(window);
+// STP embed code END	
 </script>

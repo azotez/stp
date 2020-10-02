@@ -13,25 +13,180 @@
     "title": "STP",
     "type": "object",
     "properties": {
-	  "stpFloatLayout": {
+      "stpHash": {
+        "title": "Hash",
+        "description": "Enter the STP chat hash",
+        "type": "string",
+        "default": "R_XVNe3GWPh2EICIyFj2LEyo4aroiOpNB_442o-VdJwwz5tSyohxDiFqctk9NzD7Dly2yBybxPrIH1D5dAGd7DjEXTxP2XJ-AyPOxnezCmbSrBY6gGFzl_Mtv-7lO2Nf6B7hR2jXGZMG3Suw-64q9bsHyDaGWQ8tNrWqtsjdMmSMy-AnpON6s9DnwJstfZVjGSzbFnBSa-PzCFnEablFWA"
+      },
+      "stpFloatLayout": {
         "title": "Float layout",
         "description": "Do you want the layout to float?",
         "type": "boolean",
-		"default": false
+        "default": false
+      },
+      "stpElement": {
+        "title": "Element ID",
+        "description": "Enter the STP chat block ID",
+        "type": "string",
+        "default": "#chat_block"
+      },
+      "stpTitle": {
+        "title": "Title",
+        "description": "Enter the STP chat title",
+        "type": "string",
+        "default": "Contacta con nosotros"
       },
       "stpMail": {
         "title": "Email",
-        "description": "STP email address",
+        "description": "Enter the STP email address",
         "type": "string",
-		"default": "chat@stp.es"
+        "default": "chat@stp.es"
       },
-	  "stpService": {
+      "stpService": {
         "title": "Service",
-        "description": "STP service number",
+        "description": "Enter the STP service number",
         "type": "string",
-		"default": "14928"
-      },	
-	
+        "default": "14928"
+      },
+      "stpReason": {
+        "title": "Reason",
+        "description": "Select the STP Reason",
+        "type": "boolean",
+        "default": true
+      },
+      "stpReasonRequire": {
+        "title": "Reason require",
+        "description": "Select the STP reason require",
+        "type": "boolean",
+        "default": false
+      },
+      "stpReasonText": {
+        "title": "Reason text",
+        "description": "Enter the STP reason text",
+        "type": "string",
+        "default": "¿Nos puede especificar el motivo de su consulta?"
+      },
+      "stpBackground": {
+        "title": "Background color",
+        "description": "Enter the background color in HEX (including #)",
+        "type": "string",
+        "default": "#00c2cb"
+      },
+      "stpLanguage": {
+        "title": "Language",
+        "description": "Enter the Language (2 digits) ISO 639-1 Code",
+        "type": "string",
+        "default": ""
+      },
+      "stpTextNoAgent": {
+        "title": "Text no agent",
+        "description": "Enter the Message if no agent is available",
+        "type": "string",
+        "default": "Nuestros agentes están ocupados, si deseas que contactemos contigo, indícanos el motivo y datos de contacto"
+      },
+      "stpSuccessSendEmail": {
+        "title": "Message email success",
+        "description": "Enter the message to notify that the customer will be contacted soon",
+        "type": "string",
+        "default": "Tus datos han sido recibidos correctamente, nuestros operadores contactaran contigo a la mayor brevedad posible. Gracias"
+      },
+      "stpCaptcha": {
+        "title": "Captcha",
+        "description": "Select if you want the captcha function to be active",
+        "type": "boolean",
+        "default": true
+      },
+      "stpAdvertising": {
+        "title": "Advertising",
+        "description": "Select if you want the advertising text to be active",
+        "type": "boolean",
+        "default": true
+      },
+      "stpAdvertisingText": {
+        "title": "Advertising text",
+        "description": "Enter the advertising text",
+        "type": "string",
+        "default": "¡Bienvenido! ¿Necesitas resolver tus dudas ahora?"
+      },
+      "stpAnonymous": {
+        "title": "Anonymous",
+        "description": "Select if you want the anonymous function to be active",
+        "type": "boolean",
+        "default": false
+      },
+      "stpLogin": {
+        "title": "Login",
+        "description": "Select if you want the login function to be active",
+        "type": "boolean",
+        "default": false
+      },
+      "stpRegister": {
+        "title": "Register",
+        "description": "Select if you want the register function to be active",
+        "type": "boolean",
+        "default": false
+      },
+      "stpUserEmail": {
+        "title": "User email",
+        "description": "Enter the user email (not mandatory)",
+        "type": "string",
+        "default": ""
+      },
+      "stpUserName": {
+        "title": "Username",
+        "description": "Enter the username (not mandatory)",
+        "type": "string",
+        "default": ""
+      },
+      "stpAutoSubmit": {
+        "title": "Auto submit",
+        "description": "Select if you want the auto submit function to be active",
+        "type": "boolean",
+        "default": false
+      },
+      "stpPrivacyPolicy": {
+        "title": "Privacy policy",
+        "description": "Select if you want the privacy policy function to be active",
+        "type": "boolean",
+        "default": false
+      },
+      "stpPrivacyPolicyUrl": {
+        "title": "Privacy policy URL",
+        "description": "Enter the privacy policy URL (not mandatory)",
+        "type": "string",
+        "default": ""
+      },
+      "stpPrivacyPolicyText": {
+        "title": "Privacy policy text",
+        "description": "Enter the privacy policy text (not mandatory)",
+        "type": "string",
+        "default": ""
+      },
+      "stpCssUrl": {
+        "title": "CSS URL",
+        "description": "Enter custom CSS URL",
+        "type": "string",
+        "default": "http://ecatalog.stp.es/wp-content/themes/ecatalog/chat.css"
+      },
+      "stpCssFontFamily": {
+        "title": "CSS URL",
+        "description": "Enter the CSS font families to match your template",
+        "type": "string",
+        "default": "\"Poppins\", sans-serif"
+      },
+      "stpCssTextColor": {
+        "title": "CSS text color",
+        "description": "Enter the text color in HEX (including #)",
+        "type": "string",
+        "default": "#fff"
+      },
+      "stpCssBackgroundColor": {
+        "title": "CSS background color",
+        "description": "Enter the background color in HEX (including #)",
+        "type": "string",
+        "default": "#6c6c6c"
+      }
     }
   },
   "dependencies": {

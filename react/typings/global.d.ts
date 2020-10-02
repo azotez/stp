@@ -1,4 +1,5 @@
 interface Window extends Window {
-  criteo_q: CriteoQ[]
-  criteo_id: string
+  stp_q: StpQ[]
+  stpMail: string
+  stpService: string
 }

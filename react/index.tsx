@@ -2,28 +2,28 @@ import { canUseDOM } from 'vtex.render-runtime'
 import { PixelMessage } from './typings/events'
 import { fetchEmail, getSiteType } from './helpers'
 
-async function dispatchEvent(event: CriteoQ) {
-  const { criteo_q = [], criteo_id: account } = window
-  const setAccount: CriteoAccountEvent = { event: 'setAccount', account }
-  const setEmail: CriteoEmailEvent = {
+async function dispatchEvent(event: StpQ) {
+  const { Stp_q = [], stpMail: account } = window
+  const setAccount: StpAccountEvent = { event: 'setAccount', account }
+  const setEmail: StpEmailEvent = {
     event: 'setEmail',
     email: [await fetchEmail()],
   }
-  const setSiteType: CriteoSiteTypeEvent = {
+  const setSiteType: StpSiteTypeEvent = {
     event: 'setSiteType',
     type: getSiteType(),
   }
-  criteo_q.push(setAccount, setEmail, setSiteType, event)
+  Stp_q.push(setAccount, setEmail, setSiteType, event)
 }
 
 function handleMessages(event: PixelMessage) {
-  const { criteo_q = [], criteo_id: account } = window
+  const { Stp_q = [], stpMail: account } = window
   if (!account) return
 
   switch (event.data.eventName) {
     case 'vtex:pageInfo': {
       if (event.data.eventType === 'homeView') {
-        const setHomeView: CriteoViewHomeEvent = {
+        const setHomeView: StpViewHomeEvent = {
           event: 'viewHome',
           tms: 'gtm-vtex',
         }
@@ -40,7 +40,7 @@ function handleMessages(event: PixelMessage) {
       const item: string[] = products
         .slice(0, 3)
         .map<string>(({ productId }) => productId)
-      const setViewList: CriteoViewListEvent = {
+      const setViewList: StpViewListEvent = {
         event: 'viewList',
         tms: 'gtm-vtex',
         item,
@@ -54,7 +54,7 @@ function handleMessages(event: PixelMessage) {
           product: { productId },
         },
       } = event
-      const setViewItem: CriteoViewItemEvent = {
+      const setViewItem: StpViewItemEvent = {
         event: 'viewItem',
         tms: 'gtm-vtex',
         item: productId,
@@ -67,15 +67,15 @@ function handleMessages(event: PixelMessage) {
         data: { transactionId, transactionProducts },
       } = event
 
-      const item: CriteoTrackTransactionItem[] = transactionProducts.map<
-        CriteoTrackTransactionItem
+      const item: StpTrackTransactionItem[] = transactionProducts.map<
+        StpTrackTransactionItem
       >(({ id, sellingPrice, quantity }) => ({
         id,
         price: sellingPrice,
         quantity,
       }))
 
-      const setTrackTransaction: CriteoTrackTransactionEvent = {
+      const setTrackTransaction: StpTrackTransactionEvent = {
         event: 'trackTransaction',
         id: transactionId,
         tms: 'gtm-vtex',
